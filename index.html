@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Wedding Of Rafayel & Nayla</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+background:#FFFFFF;
+font-family:'Montserrat',sans-serif;
+color:#2F2F2F;
+overflow-x:hidden;
+}
+
+section{
+padding:70px 24px;
+position:relative;
+}
+
+.container{
+max-width:520px;
+margin:auto;
+}
+
+.subtitle{
+letter-spacing:4px;
+font-size:12px;
+text-transform:uppercase;
+opacity:.7;
+margin-bottom:14px;
+}
+
+.title{
+font-family:'Cormorant Garamond',serif;
+font-size:56px;
+line-height:0.95;
+font-weight:600;
+}
+
+.title span{
+display:block;
+font-size:38px;
+margin:14px 0;
+}
+
+.desc{
+margin-top:24px;
+line-height:1.9;
+font-size:14px;
+opacity:.85;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:
+linear-gradient(to bottom, rgba(255,255,255,.85), rgba(255,255,255,.95)),
+linear-gradient(135deg,#EFE6DD,#FFFFFF,#B7C4B2);
+overflow:hidden;
+}
+
+.hero::before{
+content:'';
+position:absolute;
+width:320px;
+height:320px;
+background:#DCC9B6;
+filter:blur(120px);
+border-radius:50%;
+top:-120px;
+left:-100px;
+opacity:.45;
+animation:float 7s ease-in-out infinite;
+}
+
+.hero::after{
+content:'';
+position:absolute;
+width:280px;
+height:280px;
+background:#B7C4B2;
+filter:blur(120px);
+border-radius:50%;
+bottom:-100px;
+right:-80px;
+opacity:.35;
+animation:float 8s ease-in-out infinite reverse;
+}
+
+.date{
+margin-top:32px;
+font-size:14px;
+letter-spacing:3px;
+}
+
+.bismillah{
+background:#EFE6DD;
+text-align:center;
+}
+
+.quote{
+font-family:'Cormorant Garamond',serif;
+font-size:32px;
+line-height:1.5;
+margin-top:28px;
+}
+
+.card{
+background:#fff;
+border:1px solid rgba(0,0,0,.06);
+border-radius:28px;
+padding:34px 28px;
+margin-top:28px;
+box-shadow:0 10px 40px rgba(0,0,0,.04);
+}
+
+.name{
+font-family:'Cormorant Garamond',serif;
+font-size:42px;
+margin-bottom:12px;
+}
+
+.and{
+text-align:center;
+font-family:'Cormorant Garamond',serif;
+font-size:40px;
+margin:20px 0;
+color:#B7C4B2;
+}
+
+.label{
+font-size:12px;
+letter-spacing:3px;
+text-transform:uppercase;
+opacity:.55;
+margin-bottom:14px;
+}
+
+.schedule{
+background:#FFFFFF;
+}
+
+.schedule-box{
+border-left:3px solid #B7C4B2;
+padding-left:18px;
+margin-top:34px;
+}
+
+.schedule-box h3{
+font-family:'Cormorant Garamond',serif;
+font-size:34px;
+margin-bottom:10px;
+}
+
+.schedule-box p{
+line-height:1.9;
+font-size:14px;
+}
+
+.closing{
+background:#EFE6DD;
+text-align:center;
+}
+
+.wa-button{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+margin-top:34px;
+padding:16px 28px;
+background:#2F2F2F;
+color:#fff;
+text-decoration:none;
+border-radius:100px;
+font-size:14px;
+transition:.3s ease;
+}
+
+.wa-button:hover{
+transform:translateY(-3px);
+background:#000;
+}
+
+.footer{
+background:#000;
+padding:28px 20px;
+text-align:center;
+}
+
+.footer p{
+color:#fff;
+font-size:11px;
+font-family:'Montserrat',sans-serif;
+font-weight:600;
+letter-spacing:1px;
+margin-bottom:14px;
+}
+
+.socials{
+display:flex;
+justify-content:center;
+gap:18px;
+}
+
+.socials a{
+width:38px;
+height:38px;
+border:1px solid rgba(255,255,255,.2);
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#fff;
+text-decoration:none;
+font-size:14px;
+transition:.3s ease;
+}
+
+.socials a:hover{
+background:#fff;
+color:#000;
+transform:translateY(-3px);
+}
+
+.fade-up{
+opacity:0;
+transform:translateY(40px);
+transition:1s ease;
+}
+
+.fade-up.show{
+opacity:1;
+transform:translateY(0);
+}
+
+@keyframes float{
+0%{
+transform:translateY(0px);
+}
+50%{
+transform:translateY(20px);
+}
+100%{
+transform:translateY(0px);
+}
+}
+
+@media(max-width:480px){
+
+.title{
+font-size:46px;
+}
+
+.title span{
+font-size:30px;
+}
+
+.quote{
+font-size:26px;
+}
+
+.name{
+font-size:34px;
+}
+
+section{
+padding:60px 20px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+<div class="container fade-up">
+<div class="subtitle">The Wedding Of</div>
+
+<h1 class="title">
+Rafayel Alfatih
+<span>&</span>
+Nayla Aqeela
+</h1>
+
+<div class="date">
+12 • 12 • 2026
+</div>
+</div>
+</section>
+
+<section class="bismillah">
+<div class="container fade-up">
+
+<div class="label">Assalamu’alaikum Wr. Wb.</div>
+
+<p class="desc">
+Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan acara pernikahan putra-putri kami.
+</p>
+
+<div class="quote">
+“Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup dari jenismu sendiri supaya kamu merasa tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang.”
+</div>
+
+<p class="desc" style="margin-top:18px;">
+QS. Ar-Rum : 21
+</p>
+
+</div>
+</section>
+
+<section>
+<div class="container fade-up">
+
+<div class="card">
+<div class="label">Mempelai Pria</div>
+
+<div class="name">
+Rafayel Alfatih
+</div>
+
+<p class="desc" style="margin-top:0;">
+Putra dari Bapak H. Fadhil Ramadhan & Ibu Hj. Naura Safitri
+</p>
+</div>
+
+<div class="and">
+&
+</div>
+
+<div class="card">
+<div class="label">Mempelai Wanita</div>
+
+<div class="name">
+Nayla Aqeela
+</div>
+
+<p class="desc" style="margin-top:0;">
+Putri dari Bapak H. Rizqan Maulana & Ibu Hj. Aisyah Humaira
+</p>
+</div>
+
+</div>
+</section>
+
+<section class="schedule">
+<div class="container fade-up">
+
+<div class="schedule-box">
+<div class="label">Akad Nikah</div>
+
+<h3>Sabtu, 12 Desember 2026</h3>
+
+<p>
+08.00 WIB — Selesai<br>
+Masjid Nurul Jannah<br>
+Jl. Anggrek Raya No. 18
+</p>
+</div>
+
+<div class="schedule-box">
+<div class="label">Resepsi</div>
+
+<h3>Sabtu, 12 Desember 2026</h3>
+
+<p>
+11.00 WIB — Selesai<br>
+Aula Alana Convention Hall<br>
+Jl. Mahakam Indah No. 27
+</p>
+</div>
+
+</div>
+</section>
+
+<section class="closing">
+<div class="container fade-up">
+
+<p class="desc">
+Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kedua mempelai.
+</p>
+
+<p class="desc" style="margin-top:18px;">
+Wassalamu’alaikum Wr. Wb.
+</p>
+
+<div class="quote" style="margin-top:24px;">
+Rafayel Alfatih & Nayla Aqeela
+</div>
+
+<a class="wa-button"
+href="https://wa.me/6289512924881?text=Assalamualaikum%2C%20hai%20kak%20Avfour!%20Nanti%20aku%20bisa%20hadir%20kok%20diacara%20pernikahan%20kamu..%20Happy%20Wedding%20yaa..."
+target="_blank">
+<i class="fa-brands fa-whatsapp"></i>
+WhatsApp
+</a>
+
+</div>
+</section>
+
+<footer class="footer">
+
+<p>
+Crafted With Love — Avfour
+</p>
+
+<div class="socials">
+
+<a href="https://www.instagram.com/aiiistheticsv4?igsh=MWlrbDg3NDh0d245NA==" target="_blank">
+<i class="fa-brands fa-instagram"></i>
+</a>
+
+<a href="https://tiktok.com/@aiiistheticsv4" target="_blank">
+<i class="fa-brands fa-tiktok"></i>
+</a>
+
+<a href="https://wa.me/6289512924881" target="_blank">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
+</div>
+
+</footer>
+
+<script>
+const fadeEls = document.querySelectorAll('.fade-up');
+
+const observer = new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+});
+},{
+threshold:0.2
+});
+
+fadeEls.forEach(el=>{
+observer.observe(el);
+});
+</script>
+
+</body>
+</html>
